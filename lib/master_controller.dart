@@ -4,9 +4,13 @@ class MasterController {
   String _status = 'Completed';
   MasterService _masterService = MasterService();
 
-  MasterController();
+  MasterController() {
+    _masterService.updateSetStatusFunction(_setStatus);
+  }
 
-  MasterController.fromService(this._masterService);
+  MasterController.fromService(this._masterService) {
+    _masterService.updateSetStatusFunction(_setStatus);
+  }
 
   String get status => _status;
 
@@ -16,6 +20,6 @@ class MasterController {
   }
 
   void syncMaster() {
-    _masterService.syncMaster(_setStatus);
+    _masterService.updateMasters();
   }
 }

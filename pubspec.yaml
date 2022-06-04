@@ -12,3 +12,11 @@ environment:
 dev_dependencies:
   lints: ^1.0.0
   test: ^1.21.1
+  path:
+
+dependencies:
+  flutter:
+    sdk: flutter
+  enhanced_enum: ^0.1.2
+  sqflite: ^2.0.2
+  sqflite_common_ffi: ^2.1.0+2

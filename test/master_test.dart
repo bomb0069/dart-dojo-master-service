@@ -57,9 +57,7 @@ void main() {
         MasterController.fromService(masterService);
     masterController.syncMaster();
 
-    await Future.delayed(Duration(seconds: 3));
-    masterService.download();
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(seconds: 15));
 
     String actual = masterController.status;
     //Assert
